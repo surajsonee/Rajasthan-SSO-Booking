@@ -1,0 +1,79 @@
+{% include 'header.html' %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+            <div class="content-wrapper">
+                <h4 class="mainHeading"><a href="/visitor_registration/"><i class="fi fi-rs-arrow-small-left"></i></a>Visitor Registration</h4>
+                <div class="formBlock">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-6 col-lg-4">
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label>Select Protected Area</label>
+                                    {{ form.protected_area }}
+                                </div>
+                                <div class="form-group">
+                                    <label>Select Zone</label>
+                                    {{form.zone}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Date of Visit</label>
+                                    {{form.visit_date}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Choose Shift</label>
+                                    {{form.choose_shift}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Select Vehicle</label>
+                                    {{form.vehicle_type}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Member Name</label>
+                                    {{form.member_name}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    {{form.gender}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Nationality</label>
+                                    {{form.nationality}}
+                                </div>
+                                <div class="form-group">
+                                    <label>ID Type</label>
+                                    {{form.id_type}}
+                                </div>
+                                <div class="form-group">
+                                    <label>ID Number</label>
+                                    {{form.id_number}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Video Camera (No.)</label>
+                                    {{form.video_cam}}
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn themeBtn mt-3">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#id_protected_area").addClass("form-control");
+        $("#id_zone").addClass("form-control");
+        $("#id_choose_shift").addClass("form-control");
+        $("#id_vehicle_type").addClass("form-control");
+        $("#id_gender").addClass("form-control");
+        $("#id_nationality").addClass("form-control");
+        $("#id_id_type").addClass("form-control");
+        $("input").addClass("form-control");
+    </script>
+
+
+{% include 'footer.html' %}

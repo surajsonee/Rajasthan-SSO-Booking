@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Wildlife</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+
+</head>
+
+<body>
+
+    <section class="screenLogin">
+        <div class="rightPart flex-column">
+            <h2 class="text-dark">Client Logo</h2>
+            <!-- <img src="images/logo.svg" width="200px" alt="logo"> -->
+            <div class="midBlock mt-3">
+                <h3><a class="backBtn" href="/"><i class="fi fi-rs-arrow-small-left"></i></a> Forgot Your Password?</h3>
+                <p>Enter the email associated with your VertexPlus account and we'll send an email to reset password</p>
+                <form action="" method="post">
+                    <div style="display:none">
+                        <input type="hidden" value="{{ csrf_token }}" name="csrfmiddlewaretoken">
+                    </div>
+                    {{ form.email.errors }}
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        {{form}}
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn themeBtn w-100">Send Instructions</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/static/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/custom.js"></script>
+</body>
+
+</html>

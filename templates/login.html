@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Wildlife</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+
+</head>
+
+<body>
+
+    <section class="screenLogin">
+        <div class="rightPart flex-column">
+            <h2 class="text-dark">Client Logo</h2>
+            <!-- <img src="images/logo.svg" width="200px" alt="logo"> -->
+            <div class="midBlock mt-3">
+                <h3>Admin Login</h3>
+                {% if next %}
+                    <form role="form" method="post" action="{% url 'login' %}?next={{ next }}">
+                {% else %}
+                    <form role="form" method="post" action="{% url 'login' %}">
+                {% endif %}
+                {% csrf_token %}
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        {{form.username_or_email}}
+                    </div>
+                    <div class="form-group mb-1">
+                        <label>Password</label>
+                        {{form.password}}
+                        <a href="javascript:void(0);" class="showText">Show</a>
+                    </div>
+                    <div class="form-group text-right">
+                        <a href="reset-password" class="linktext">Forgot your password?</a>
+                    </div>
+                    <button type="submit" class="btn themeBtn w-100">login</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/static/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/custom.js"></script>
+</body>
+
+</html>

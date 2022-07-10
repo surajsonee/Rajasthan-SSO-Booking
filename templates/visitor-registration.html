@@ -1,0 +1,54 @@
+{% include 'header.html' %}
+      
+            <div class="content-wrapper">
+                <h4 class="mainHeading justify-content-between">Visitor Registration <a class="addBtn" href="/add_visitor/"><i class="fi fi-rs-plus-small"></i></a></h4>
+                <div class="table-responsive-lg">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Protected Area</th>
+                                <th>Zone</th>
+                                <th>Date of Visit</th>
+                                <th>Shift</th>
+                                <th>Vehicle</th>
+                                <th>Member Name</th>
+                                <th>Gender</th>
+                                <th>Nationality</th>
+                                <th>ID Type</th>
+                                <th>ID Number</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for visit in visits %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{visit.protected_area}}</td>
+                                <td>{{visit.zone}}</td>
+                                <td>{{visit.visit_date}}</td>
+                                <td>{{visit.choose_shift}}</td>
+                                <td>{{visit.vehicle_type}}</td>
+                                <td>{{visit.member_name}}</td>
+                                <td>{{visit.gender}}</td>
+                                <td>{{visit.nationality}}</td>
+                                <td>{{visit.id_type}}</td>
+                                <td>{{visit.id_number}}</td>
+                                <td>
+                                    <a class="actionBtn mr-2" href="{% url 'edit_visitor' visit.id %}"><img src="/static/images/edit.svg" alt="img"></a>
+                                    <a class="actionBtn actionBtn2" href="{% url 'remove_from_visitor' visit.id %}"><i class="fi fi-rs-trash"></i></a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {% include 'footer.html' %}

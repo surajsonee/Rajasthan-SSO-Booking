@@ -1,0 +1,44 @@
+{% include 'header.html' %}
+
+            <div class="content-wrapper">
+                <h4 class="mainHeading">Submitted Visitor Report</h4>
+
+                <div class="table-responsive-lg">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Member Name</th>
+                                <th>Gender</th>
+                                <th>Nationality</th>
+                                <th>ID Type</th>
+                                <th>ID Number</th>
+                                <th>Date of Visit</th>
+                                <th>Shift</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for data in data_obj %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{data.member_name}}</td>
+                                <td>{{data.gender}}</td>
+                                <td>{{data.nationality}}</td>
+                                <td>{{data.id_type}}</td>
+                                <td>{{data.id_number}}</td>
+                                <td>{{data.visit_date}}</td>
+                                <td>{{data.choose_shift}}</td>
+                                <td><a class="actionBtn" href="javascript:void(0);">Rebook</a></td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% include 'footer.html' %}

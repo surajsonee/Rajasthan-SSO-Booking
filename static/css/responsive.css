@@ -1,0 +1,84 @@
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .screenLogin .rightPart .midBlock {
+        width: 90%;
+        padding: 20px;
+    }
+    .screenLogin .rightPart .midBlock h3 {
+        flex-direction: column;
+    }
+    .screenLogin .rightPart .midBlock .backBtn {
+        margin: 0 0 5px;
+    }
+    .table {
+        white-space: nowrap;
+    }
+    .table .thead-light th {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .screenLogin .rightPart {
+        width: 100%;
+    }
+    .screenLogin .rightPart .midBlock {
+        width: 80%;
+        padding: 20px;
+    }
+    .screenLogin .rightPart .midBlock h3 {
+        font-size: 20px;
+        flex-direction: column;
+    }
+    .screenLogin .rightPart .midBlock .backBtn {
+        margin: 0 0 5px;
+    }
+    #sidebar {
+        margin-left: -250px
+    }
+    #sidebar.active {
+        margin-left: 0px
+    }
+    .content {
+        margin-left: 0;
+    }
+    #sidebar.active+.content {
+        margin-left: 250px;
+    }
+    .table {
+        white-space: nowrap;
+    }
+    .table .thead-light th {
+        font-size: 12px;
+    }
+    .table td {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #sidebar {
+        margin-left: -250px
+    }
+    #sidebar.active {
+        margin-left: 0px
+    }
+    .content {
+        margin-left: 0;
+    }
+    #sidebar.active+.content {
+        margin-left: 250px;
+    }
+    .screenLogin .rightPart {
+        width: 100%;
+    }
+    .screenLogin .rightPart .midBlock {
+        width: 90%;
+    }
+}

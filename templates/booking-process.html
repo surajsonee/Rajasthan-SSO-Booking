@@ -1,0 +1,326 @@
+{% include 'header.html' %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <div class="content-wrapper">
+                <h4 class="mainHeading"><a href="#"><i class="fi fi-rs-arrow-small-left"></i></a>Booking Process</h4>
+                <div class="formBlock">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-8 col-md-6 col-lg-4">
+
+                                <div class="form-group">
+                                    <label>Select SSO Login (Through which you want to book ticket)</label>
+                                    <select class="form-control">
+                                        <option selected disabled>Select</option>
+                                        {% for sso_id in sso %}
+                                        <option>{{sso_id.sso_id}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Select Protected Area</label>
+                                    <select id="protected_area" class="form-control">
+                                        <option selected disabled>Select</option>
+                                        <option>Ranthambore National Park - Sawai Madhopur</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Select Zone</label>
+                                    <select id="zone" class="form-control">
+                                        <option selected disabled>Select</option>
+                                        <option>Zone 1</option>
+                                        <option>Zone 2</option>
+                                        <option>Zone 3</option>
+                                        <option>Zone 4</option>
+                                        <option>Zone 5</option>
+                                        <option>Zone 6</option>
+                                        <option>Zone 7</option>
+                                        <option>Zone 8</option>
+                                        <option>Zone 9</option>
+                                        <option>Zone 10</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Date of Visit</label>
+                                    <input id="date" type="date" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Choose Shift</label>
+                                    <select id="shift" class="form-control">
+                                        <option selected disabled>Select</option>
+                                        <option>Morning</option>
+                                        <option>Evening</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Select Vehicle</label>
+                                    <select id="vehicle_type" class="form-control">
+                                        <option selected disabled>Select</option>
+                                        <option>Canter</option>
+                                        <option>Gypsy</option>
+                                    </select>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-11 col-lg-8">
+                                <div class="table-responsive-lg mt-3">
+                                    <table class="table">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>&nbsp;</th>
+                                                <th>Zone</th>
+                                                <th>Date of Visit</th>
+                                                <th>Shift</th>
+                                                <th>Vehicle</th>
+                                                <th>Member Name</th>
+                                                <th>&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                        <label class="custom-control-label" for="customCheck1"></label>
+                                                    </div>
+                                                </td>
+                                                <td>Zone 3</td>
+                                                <td>17/02/2022</td>
+                                                <td>Evening</td>
+                                                <td>Gypsy</td>
+                                                <td>Rajesh Jain</td>
+                                                <td>M</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                        <label class="custom-control-label" for="customCheck2"></label>
+                                                    </div>
+                                                </td>
+                                                <td>Zone 3</td>
+                                                <td>17/02/2022</td>
+                                                <td>Evening</td>
+                                                <td>Gypsy</td>
+                                                <td>Rajesh Jain</td>
+                                                <td>M</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                        <label class="custom-control-label" for="customCheck3"></label>
+                                                    </div>
+                                                </td>
+                                                <td>Zone 3</td>
+                                                <td>17/02/2022</td>
+                                                <td>Evening</td>
+                                                <td>Gypsy</td>
+                                                <td>Mukesh Kumar</td>
+                                                <td>M</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                        <label class="custom-control-label" for="customCheck4"></label>
+                                                    </div>
+                                                </td>
+                                                <td>Zone 3</td>
+                                                <td>17/02/2022</td>
+                                                <td>Evening</td>
+                                                <td>Gypsy</td>
+                                                <td>Rajesh Jain</td>
+                                                <td>M</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                                        <label class="custom-control-label" for="customCheck5"></label>
+                                                    </div>
+                                                </td>
+                                                <td>Zone 3</td>
+                                                <td>17/02/2022</td>
+                                                <td>Evening</td>
+                                                <td>Gypsy</td>
+                                                <td>Mukesh Kumar</td>
+                                                <td>M</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="start_process" class="btn themeBtn mt-3">Start Process</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var token = '{{csrf_token}}';
+            // $("#zone").on('change', function postinput(){
+            //     var zone = $(this).val(); // this.value
+            //     $.ajax({ 
+            //         headers: { "X-CSRFToken": token },
+            //         url: '/booking_process/',
+            //         data: { zone: zone },
+            //         type: 'post'
+            //     }).done(function(responseData) {
+            //     var result = $.parseJSON(responseData);
+            //     $.each(result, function(k, v) {
+            //         //display the key and value pair
+            //         $('tbody').append('<tr> <td> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="customCheck1"> <label class="custom-control-label" for="customCheck1"></label> </div> </td> <td>'+v.fields.zone+'</td> <td>'+v.fields.visit_date+'</td> <td>'+v.fields.choose_shift+'</td> <td>'+v.fields.vehicle_type+'</td> <td>'+v.fields.member_name+'</td> <td>M</td> </tr>')
+            //         console.log(v.fields.gender)
+            //     });
+                    
+            //     }).fail(function() {
+            //         console.log('Failed');
+            //     });
+            // });
+
+            // //check-2
+            // $("#date").on('input', function (){
+            //     var date = $('#date').val(); // this.value
+            //     $.ajax({ 
+            //         headers: { "X-CSRFToken": token },
+            //         url: '/booking_process/',
+            //         data: { date: date },
+            //         type: 'post'
+            //     }).done(function(responseData) {
+            //     var result = $.parseJSON(responseData);
+            //     $.each(result, function(k, v) {
+            //         //display the key and value pair
+            //         $('tbody').append('<tr> <td> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="customCheck1"> <label class="custom-control-label" for="customCheck1"></label> </div> </td> <td>'+v.fields.zone+'</td> <td>'+v.fields.visit_date+'</td> <td>'+v.fields.choose_shift+'</td> <td>'+v.fields.vehicle_type+'</td> <td>'+v.fields.member_name+'</td> <td>M</td> </tr>')
+            //         console.log(v.fields.gender)
+            //     });
+                    
+            //     }).fail(function() {
+            //         console.log('Failed');
+            //     });
+            // });
+
+            // //check-3
+            // $("#shift").on('input', function (){
+            //     var shift = $('#shift').val(); // this.value
+            //     $.ajax({ 
+            //         headers: { "X-CSRFToken": token },
+            //         url: '/booking_process/',
+            //         data: { shift: shift },
+            //         type: 'post'
+            //     }).done(function(responseData) {
+            //     var result = $.parseJSON(responseData);
+            //     $.each(result, function(k, v) {
+            //         //display the key and value pair
+            //         $('tbody').append('<tr> <td> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="customCheck1"> <label class="custom-control-label" for="customCheck1"></label> </div> </td> <td>'+v.fields.zone+'</td> <td>'+v.fields.visit_date+'</td> <td>'+v.fields.choose_shift+'</td> <td>'+v.fields.vehicle_type+'</td> <td>'+v.fields.member_name+'</td> <td>M</td> </tr>')
+            //         console.log(v.fields.gender)
+            //     });
+                    
+            //     }).fail(function() {
+            //         console.log('Failed');
+            //     });
+            // });
+
+            //check-4
+            $("#vehicle_type").on('input', function (){
+                var zone = $('#zone').val(); // this.value
+                var date = $('#date').val(); // this.value
+                var shift = $('#shift').val(); // this.value
+                var vehicle_type = $('#vehicle_type').val(); // this.value
+                $.ajax({ 
+                    headers: { "X-CSRFToken": token },
+                    url: '/booking_process/',
+                    data: { vehicle_type: vehicle_type, zone: zone, date: date, shift: shift },
+                    type: 'post'
+                }).done(function(responseData) {
+                    var result = $.parseJSON(responseData);
+                    $.each(result, function(k, v) {
+                        //display the key and value pair
+                        $('tbody').append('<tr> <td> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="customCheck1"> <label class="custom-control-label" for="customCheck1"></label> </div> </td> <td>'+v.fields.zone+'</td> <td>'+v.fields.visit_date+'</td> <td>'+v.fields.choose_shift+'</td> <td>'+v.fields.vehicle_type+'</td> <td>'+v.fields.member_name+'</td> <td>M</td> </tr>')
+                        console.log(v.fields.gender)
+                    });
+                    
+                }).fail(function() {
+                    console.log('Failed');
+                    $('tbody').append("No data")
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(function(){
+            $(".custom-control-input").on("click", function() {
+                var data = [];
+                $("table > tbody > tr").each(function () {
+                var $tr = $(this);
+                if ($tr.find(".custom-control-input").is(":checked")) {
+                    data.push({
+                    vehicle: $tr.find("td:eq(4)").text(),
+                    //number: Number($tr.find(".qty").text())
+                    });
+                }
+                });
+                console.clear();
+                console.log(data);
+                console.log(Object.keys(data).length);
+                count = 0
+                $.each(data, function(k, v) {
+                    //display the key and value pair
+                    //alert(k + ' is ' + v.vehicle);
+                    if (v.vehicle == "Gypsy") {
+                        count = count+1
+                    }
+                });
+                console.log(count)
+                if (count > 5) {
+                    alert("Maximum limit reached for Gypsy")
+                    this.checked = false;
+                }
+            });
+            });
+    </script>
+
+<script>
+    $(function(){
+        $(".custom-control-input").on("click", function() {
+            var data = [];
+            $("table > tbody > tr").each(function () {
+            var $tr = $(this);
+            if ($tr.find(".custom-control-input").is(":checked")) {
+                data.push({
+                vehicle: $tr.find("td:eq(4)").text(),
+                //number: Number($tr.find(".qty").text())
+                });
+            }
+            });
+            console.clear();
+            console.log(data);
+            console.log(Object.keys(data).length);
+            count = 0
+            $.each(data, function(k, v) {
+                //display the key and value pair
+                //alert(k + ' is ' + v.vehicle);
+                if (v.vehicle == "Canter") {
+                    count = count+1
+                }
+            });
+            console.log(count)
+            if (count > 20) {
+                alert("Maximum limit reached for Gypsy")
+                this.checked = false;
+            }
+        });
+        });
+</script>
+
+    

@@ -1,0 +1,474 @@
+@font-face {
+    font-family: "Google Sans";
+    src: url("../fonts/GoogleSans-Regular.woff2") format("woff2"), url("../fonts/GoogleSans-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: url("../fonts/GoogleSans-Medium.woff2") format("woff2"), url("../fonts/GoogleSans-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: url("../fonts/GoogleSans-Bold.woff2") format("woff2"), url("../fonts/GoogleSans-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.custom-control-input:focus~.custom-control-label::before {
+    box-shadow: none;
+}
+
+.text-decoration {
+    text-decoration: underline;
+}
+
+body {
+    font-family: "Google Sans";
+    font-size: 14px;
+    background: #fff;
+}
+
+.themeBtn {
+    background: #5cb85c;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+}
+
+.themeBtn:hover {
+    background: #448b44;
+    color: #fff;
+}
+
+.mainHeading {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.mainHeading a {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.mainHeading a:hover {
+    background: #00c936;
+}
+
+.mainHeading a.addBtn {
+    background: #737373;
+    height: 35px;
+    width: 35px;
+    margin-right: 0;
+}
+
+.mainHeading a.addBtn:hover {
+    background: #00c936;
+}
+
+
+/*================= Login Screen Dealer ================*/
+
+.screenLogin {
+    background: #f9eaa1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.screenLogin .rightPart {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenLogin .rightPart .midBlock {
+    width: 70%;
+    padding: 30px 50px;
+    background: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.16);
+    border: 1px solid #dbdbdb;
+}
+
+.screenLogin .rightPart .midBlock h3 {
+    color: #737373;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+}
+
+.screenLogin .rightPart .midBlock form {
+    margin-top: 10px;
+}
+
+.screenLogin .rightPart .midBlock .backBtn {
+    background: #737373;
+    color: #fff;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 5px 12px 0 -35px;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+}
+
+.screenLogin .rightPart .midBlock .backBtn:hover {
+    background: #00c936;
+}
+
+.screenLogin .rightPart .midBlock p {
+    font-size: 15px;
+    color: #212121;
+    font-weight: normal;
+}
+
+.screenLogin .rightPart .midBlock p a {
+    color: #2e3192;
+    text-decoration: underline;
+    transition: all 0.3s ease-in;
+}
+
+.screenLogin .rightPart .midBlock p a:hover {
+    color: #00c936;
+}
+
+
+/*================= Login Screen Dealer ================*/
+
+
+/*================ Sidebar ===================*/
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    background: #F9EAA1;
+    transition: all 0.3s;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#sidebar.active {
+    margin-left: -250px
+}
+
+#sidebar .sidebar-header {
+    text-align: center;
+    padding: 18px 15px;
+    background: #F9EAA1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#sidebar .menu {
+    padding: 30px;
+}
+
+#sidebar .menu li {
+    position: relative;
+}
+
+#sidebar .menu li a {
+    display: flex;
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 8px 5px;
+    transition: all 0.3s ease-in;
+}
+
+#sidebar .menu li a:hover,
+#sidebar .menu li a.active {
+    color: #a88b00;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 13px 20px;
+}
+
+.navbar .btnToogle {
+    background: #F9EAA1;
+    color: #737373;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+}
+
+.navbar .btnToogle:hover {
+    background: #f3df7a;
+    color: #000;
+}
+
+.navbar .btnUser {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.navbar .btnUser .userImg {
+    border: 1px solid #212121;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.navbar .btnUser .userImg img {
+    width: 100%;
+}
+
+.navbar .btnUser i {
+    margin-left: 3px;
+}
+
+.navbar .dropdown-menu {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 0;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.16);
+}
+
+.navbar .dropdown-menu:after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: 0px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #fff;
+    box-shadow: -3px -3px 5px rgba(0, 0, 0, 0.06);
+}
+
+.navbar .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: normal;
+    transition: all 0.3s ease-in;
+}
+
+.navbar .dropdown-menu a:hover {
+    background: #f9eaa1;
+}
+
+.navbar .dropdown-menu a img {
+    margin-right: 8px;
+}
+
+.content {
+    width: 100%;
+    margin-left: 250px;
+    transition: all 0.3s ease-in;
+}
+
+#sidebar.active+.content {
+    margin-left: 0px;
+}
+
+.content-wrapper {
+    padding: 30px 25px;
+}
+
+
+/*================ Sidebar ===================*/
+
+
+/*================ Form Design ===================*/
+
+.formBlock {
+    border: 1px solid #BCBCBC;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+form label {
+    font-size: 14px;
+    color: #212121;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+form .form-control {
+    border-radius: 0;
+    height: 44px;
+    border: 1px solid #dcdcdc;
+}
+
+form .form-control:focus {
+    border: 1px solid #212121;
+    box-shadow: none;
+}
+
+form select.form-control {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(../images/selArrow.svg) no-repeat right 15px center;
+}
+
+.formBlock .themeBtn {
+    border-radius: 0;
+    padding: 10px 30px;
+}
+.showText {
+    color: #212121;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    right: 15px;
+    top: 38px;
+    transition: all 0.3s ease-in;
+}
+.showText:hover {
+    color: #00c936;
+}
+.linktext {
+    color: #344855;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: normal;
+    transition: all 0.3s ease-in;
+}
+.linktext:hover {
+    color: #00c936;
+}
+/*================ Form Design ===================*/
+
+
+/*================ Table Design ===================*/
+
+.table {
+    border: 1px solid #bcbcbc;
+}
+
+.table tr {
+    border: 1px solid #bcbcbc;
+}
+
+.table .thead-light th {
+    background-color: #f8f8f8;
+    border: none;
+    color: #212121;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.table td {
+    border: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.table td a.actionBtn {
+    color: #212121;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease-in;
+    display: inline-flex;
+}
+
+.table td a.actionBtn:hover {
+    color: #00c936;
+}
+
+.table td a.actionBtn2:hover {
+    color: #f00;
+}
+
+.table .custom-control {
+    top: -5px;
+    min-height: 0rem;
+}
+
+.table .custom-checkbox .custom-control-label::before {
+    border-radius: 0px;
+}
+
+
+/*================ Table Design ===================*/
